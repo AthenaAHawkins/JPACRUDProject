@@ -18,10 +18,12 @@ class FourteenerTest {
 	private static EntityManagerFactory emf;
 	private EntityManager em;
 	private Fourteener mountain;
+	
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
 		emf = Persistence.createEntityManagerFactory("JPAFourteeners");
+		
 	}
 
 	@AfterAll
@@ -45,6 +47,19 @@ class FourteenerTest {
 	void test_fourteener_mapping() {
 		assertNotNull(mountain);
 		assertEquals("Mount Elbert", mountain.getName());
+	}
+	
+	@Test
+	void test_findById() {
+		assertNotNull(mountain);
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 
 }

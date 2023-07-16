@@ -14,8 +14,17 @@
 <body>
 <h1>COLORADO FOURTEENERS</h1>
 
+<a href = "createForm.do">create a new Fourteener</a><br>
+
 <c:forEach var="mountain" items="${fourteeners}">
 <li>${mountain.name}</li>
 </c:forEach>
+
+<form action = "findById.do" method = "POST">
+<input type="text" name="findById"><br>
+<button>Find by Id</button>
+</form>
+
+
 </body>
 </html>

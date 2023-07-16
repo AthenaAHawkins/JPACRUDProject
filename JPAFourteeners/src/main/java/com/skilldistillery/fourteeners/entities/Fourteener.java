@@ -1,5 +1,6 @@
 package com.skilldistillery.fourteeners.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,23 +12,121 @@ public class Fourteener {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String name;
+	private Integer altitude;
+	@Column(name="mountain_range")
+	private String mountainRange;
+	@Column(name="park_forest")
+	private String parkForest;
+	@Column(name="number_of_routes")
+	private Integer numOfRoutes;
+	@Column(name="standard_difficulty")
+	private String standardDifficulty;
+	@Column(name="standard_distance")
+	private Double standardDistance;
+	@Column(name="standard_elev_gain")
+	private Integer standardElevGain;
+	
 	
 	public int getId() {
 		return id;
 	}
+
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
+
 	public String getName() {
 		return name;
 	}
+
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
+
+	public Integer getAltitude() {
+		return altitude;
+	}
+
+
+	public void setAltitude(Integer altitude) {
+		this.altitude = altitude;
+	}
+
+
+	public String getMountainRange() {
+		return mountainRange;
+	}
+
+
+	public void setMountainRange(String mountainRange) {
+		this.mountainRange = mountainRange;
+	}
+
+
+	public String getParkForest() {
+		return parkForest;
+	}
+
+
+	public void setParkForest(String parkForest) {
+		this.parkForest = parkForest;
+	}
+
+
+	public Integer getNumOfRoutes() {
+		return numOfRoutes;
+	}
+
+
+	public void setNumOfRoutes(Integer numOfRoutes) {
+		this.numOfRoutes = numOfRoutes;
+	}
+
+
+	public String getStandardDifficulty() {
+		return standardDifficulty;
+	}
+
+
+	public void setStandardDifficulty(String standardDifficulty) {
+		this.standardDifficulty = standardDifficulty;
+	}
+
+
+	public Double getStandardDistance() {
+		return standardDistance;
+	}
+
+
+	public void setStandardDistance(Double standardDistance) {
+		this.standardDistance = standardDistance;
+	}
+
+
+	public Integer getStandardElevGain() {
+		return standardElevGain;
+	}
+
+
+	public void setStandardElevGain(Integer standardElevGain) {
+		this.standardElevGain = standardElevGain;
+	}
+
+
 	@Override
 	public String toString() {
-		return "Fourteener [id=" + id + ", name=" + name + "]";
+		return "Fourteener [id=" + id + ", name=" + name + ", altitude=" + altitude + ", mountainRange=" + mountainRange
+				+ ", parkForest=" + parkForest + ", numOfRoutes=" + numOfRoutes + ", standardDifficulty="
+				+ standardDifficulty + ", standardDistance=" + standardDistance + ", standardElevGain="
+				+ standardElevGain;
 	}
+	
+	
+	
 
 	
 	
