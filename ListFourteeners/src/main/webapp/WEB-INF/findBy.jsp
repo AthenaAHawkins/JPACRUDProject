@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +24,7 @@
             Menu
           </button>
           <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item" href="findBy.do">Find By Id</a></li>
+            <li><a class="dropdown-item" href="findBy.do">Find By Id or Keyword</a></li>
             <li><a class="dropdown-item" href="listOf14s.do">Listed 14rs</a></li>
             <li><a class="dropdown-item" href="createForm.do">Create a missing 14r</a></li>
           </ul>
@@ -34,19 +36,15 @@
 
 
 
+<form action = "findById.do" method = "POST">
+<input type="text" name="id"><br>
+<button>Find by Id</button>
+</form>
 
-
-<h1>creation successful</h1>
-<p>Name: ${newF.name}</p>
-<p>Id: ${newF.id}</p>
-<p>Altitude: ${newF.altitude}</p>
-<p>Mountain Range: ${newF.mountainRange}</p>
-<p>Park/Forest: ${newF.parkForest}</p>
-<p>Number Of Routes: ${newF.numOfRoutes}</p>
-<p>Standard Difficulty: ${newF.standardDifficulty}</p>
-<p>Standard Distance: ${newF.standardDistance}</p>
-<p>Standard Elevation Gain: ${newF.standardElevGain}</p>
-
+<form action = "findByKeyword.do" method = "POST">
+<input type="text" name="findByKeyword"><br>
+<button>Find by keyword</button>
+</form>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>

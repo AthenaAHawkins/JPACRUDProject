@@ -24,18 +24,18 @@ public class FourteenerController {
 	}
 	
 	@RequestMapping(path= {"findById.do"})
-	public String findById (Model model, @RequestParam Integer findById) {
-		Fourteener singleFourt = fourteenerDAO.findById(findById);
+	public String findById (Model model, @RequestParam Integer id) {
+		Fourteener singleFourt = fourteenerDAO.findById(id);
 		model.addAttribute("singleFourt",singleFourt);
 		return "result";
 	}
 	
-//	@RequestMapping(path= {"findByKeyword.do"})
-//	public String findByKeyword(Model model, @RequestParam("name") String name) {
-//		List<Fourteener> someFourts = fourteenerDAO.findByKeyword(name);
-//		model.addAttribute("someFourts", someFourts);
-//		return "result";
-//	}
+	@RequestMapping(path= {"findByKeyword.do"})
+	public String findByKeyword(Model model, @RequestParam("findByKeyword") String name) {
+		List<Fourteener> someFourts = fourteenerDAO.findByKeyword(name);
+		model.addAttribute("someFourts", someFourts);
+		return "result";
+	}
 	
 	@RequestMapping(path= {"create.do"})
 	public String create (Model model, Fourteener fourteener) {
@@ -66,6 +66,22 @@ public class FourteenerController {
 			}
 		
 	}
+	@RequestMapping(path= {"listOf14s.do"})
+	public String listAll(Model model) {
+		model.addAttribute("fourteeners", fourteenerDAO.findAll());
+		return "listOf14s";
+	}
 	
-
+	@RequestMapping(path= {"findBy.do"})
+	public String findBy(Model model) {
+		return "findBy";
+	}
+	
+	@RequestMapping(path= {"displayAllInfo.do"})
+	public String displayAllInfo (Model model, @RequestParam Integer id) {
+		Fourteener singleFourt = fourteenerDAO.findById(id);
+		model.addAttribute("singleFourt",singleFourt);
+		return "displayAllInfo";
+	}
+	
 }

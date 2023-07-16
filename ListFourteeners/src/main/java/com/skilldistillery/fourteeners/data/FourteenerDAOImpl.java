@@ -29,13 +29,13 @@ public class FourteenerDAOImpl implements FourteenerDAO {
 		return em.createQuery(jpql, Fourteener.class).getResultList();
 	}
 	
-//	@Override
-//	public List<Fourteener> findByKeyword(String name) {
-//		   String jpql = "SELECT mountain FROM Fourteener mountain WHERE UPPER(mountain.name) LIKE :name";
-//		    return em.createQuery(jpql, Fourteener.class)
-//		             .setParameter("name", "%" + name.toUpperCase() + "%")
-//		             .getResultList();
-//		}
+	@Override
+	public List<Fourteener> findByKeyword(String name) {
+		   String jpql = "SELECT mountain FROM Fourteener mountain WHERE UPPER(mountain.name) LIKE :name";
+		    return em.createQuery(jpql, Fourteener.class)
+		             .setParameter("name", "%" + name.toUpperCase() + "%")
+		             .getResultList();
+		}
 
 	@Override
 	public Fourteener create(Fourteener mountain) {

@@ -1,10 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>   
+
+ 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>list Of 14rs</title>
 </head>
 <body>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -22,7 +26,7 @@
             Menu
           </button>
           <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item" href="findBy.do">Find By Id</a></li>
+            <li><a class="dropdown-item" href="findBy.do">Find By Id or Keyword</a></li>
             <li><a class="dropdown-item" href="listOf14s.do">Listed 14rs</a></li>
             <li><a class="dropdown-item" href="createForm.do">Create a missing 14r</a></li>
           </ul>
@@ -32,21 +36,11 @@
   </div>
 </nav>
 
+<h3>Colorado 14rs</h3>
 
-
-
-
-<h1>creation successful</h1>
-<p>Name: ${newF.name}</p>
-<p>Id: ${newF.id}</p>
-<p>Altitude: ${newF.altitude}</p>
-<p>Mountain Range: ${newF.mountainRange}</p>
-<p>Park/Forest: ${newF.parkForest}</p>
-<p>Number Of Routes: ${newF.numOfRoutes}</p>
-<p>Standard Difficulty: ${newF.standardDifficulty}</p>
-<p>Standard Distance: ${newF.standardDistance}</p>
-<p>Standard Elevation Gain: ${newF.standardElevGain}</p>
-
+<c:forEach var="mountain" items="${fourteeners}">
+<li><a href ="displayAllInfo.do?id=${mountain.id}">${mountain.name}</a></li>
+</c:forEach>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
