@@ -27,7 +27,13 @@ public class FourteenerController {
 	public String findById (Model model, @RequestParam Integer id) {
 		Fourteener singleFourt = fourteenerDAO.findById(id);
 		model.addAttribute("singleFourt",singleFourt);
-		return "result";
+		if(singleFourt == null) {
+			return "error";
+		} else {
+			
+			return "result";
+		}
+		
 	}
 	
 	@RequestMapping(path= {"findByKeyword.do"})
@@ -56,7 +62,7 @@ public class FourteenerController {
 	}
 	
 	@RequestMapping(path={"delete.do"})
-	public String update(@RequestParam int id) {
+	public String delete(@RequestParam int id) {
 		boolean deleted = fourteenerDAO.deleteById(id);
 		if(deleted) {
 			return "deleteSuccess";

@@ -9,7 +9,7 @@
 <meta charset="UTF-8">
 <title>input a Fourteener</title>
 </head>
-<body>
+<body style="background-color:rgb(224, 255, 255);">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 <h1>Input a missing Fourteener</h1>
 

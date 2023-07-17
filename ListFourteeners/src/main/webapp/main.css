@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+
+    body {
+        background-image:url('https://en.wikipedia.org/wiki/Rocky_Mountains#/media/File:Moraine_Lake_17092005.jpg');
+        background-repeat: no-repeat;
+        font-family: 'Times New Roman', Times, serif;
+    }

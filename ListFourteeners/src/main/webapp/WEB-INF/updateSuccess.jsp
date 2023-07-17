@@ -10,7 +10,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
+<body style="background-color:rgb(224, 255, 255);">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
@@ -36,10 +36,16 @@
 </nav>
 
 
-
-
 <h1>Update successful</h1>
-<p>${updated.name}</p>
+
+<p>Name: ${updated.name}</p>
+<p>Altitude: ${updated.altitude}</p>
+<p>Mountain Range: ${updated.mountainRange}</p>
+<p>Park/Forest: ${updated.parkForest}</p>
+<p>Number Of Routes: ${updated.numOfRoutes}</p>
+<p>Standard Difficulty: ${updated.standardDifficulty}</p>
+<p>Standard Distance: ${updated.standardDistance}</p>
+<p>Standard Elevation Gain: ${updated.standardElevGain}</p>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>

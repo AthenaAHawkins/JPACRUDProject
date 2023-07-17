@@ -10,7 +10,7 @@
 <meta charset="UTF-8">
 <title>list Of 14rs</title>
 </head>
-<body>
+<body style="background-color:rgb(224, 255, 255);">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -37,6 +37,15 @@
 </nav>
 
 <h3>Colorado 14rs</h3>
+
+
+<div>
+<h4>DID YOU KNOW? </h4>
+<p>There are actually 58 peaks in Colorado that soar above 14'000 ft' in elevation.
+In order to become an official ranked Fourteener, a peak must have at least 300 ft' of Prominence.
+Prominence is measured by calculating the feet from the lowest point of the lowest saddle to its nearest peak.
+There are 5 unranked 14rs in Colorado but they are still worth the climb!</p>
+</div>
 
 <c:forEach var="mountain" items="${fourteeners}">
 <li><a href ="displayAllInfo.do?id=${mountain.id}">${mountain.name}</a></li>

@@ -10,12 +10,19 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link href='webapp/main.css' rel='stylesheet'>
 </head>
+<style>
+
+</style>
 <body>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+
+
 <h1>COLORADO FOURTEENERS</h1>
 
-  
+<div>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="home.do">HOME</a>
@@ -38,8 +45,9 @@
     </div>
   </div>
 </nav>
+</div>
 
-
+<img  width="100%" src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Moraine_Lake_17092005.jpg">
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>

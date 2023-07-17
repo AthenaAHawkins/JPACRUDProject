@@ -1,5 +1,7 @@
 package com.skilldistillery.fourteeners.entities;
 
+import java.util.Objects;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -123,6 +125,31 @@ public class Fourteener {
 				+ ", parkForest=" + parkForest + ", numOfRoutes=" + numOfRoutes + ", standardDifficulty="
 				+ standardDifficulty + ", standardDistance=" + standardDistance + ", standardElevGain="
 				+ standardElevGain;
+	}
+
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(altitude, id, mountainRange, name, numOfRoutes, parkForest, standardDifficulty,
+				standardDistance, standardElevGain);
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Fourteener other = (Fourteener) obj;
+		return Objects.equals(altitude, other.altitude) && id == other.id
+				&& Objects.equals(mountainRange, other.mountainRange) && Objects.equals(name, other.name)
+				&& Objects.equals(numOfRoutes, other.numOfRoutes) && Objects.equals(parkForest, other.parkForest)
+				&& Objects.equals(standardDifficulty, other.standardDifficulty)
+				&& Objects.equals(standardDistance, other.standardDistance)
+				&& Objects.equals(standardElevGain, other.standardElevGain);
 	}
 	
 	
